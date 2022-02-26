@@ -3,17 +3,18 @@
 }
 a {
   text-decoration: none;
+  color: black;
+}
+.links > a{
+  text-decoration: none;
   color: aliceblue;
   padding: 7px;
   margin: auto 8px;
-}
-.links > a{
   border-radius: 8px;
 }
 a:hover{
-    color: indigo;
     background-color: #f1356d;
-    transition: .5s;
+    transition: .1s;
 }
 .navbar{
   background-color: indigo;
@@ -25,6 +26,10 @@ a:hover{
   max-width: 1200px;
   margin: 0 auto;
 }
+.navbar:hover{
+  background-color: rgba(90, 0, 160);
+  transition: .1s;
+}
 .content{
   max-width: 700px;
   margin: 16px auto;
@@ -32,12 +37,51 @@ a:hover{
 }
 /* blogs */
 .blog-preview{
-  padding: 7px 12px;
-  margin: 5px 10px;
-  border-radius: 5px;
+  box-shadow: 10px 10px 10px -1px rgba(0,0,0,0.15);
+  padding: 12px 17px;
+  margin: 5px 15px;
+  border-radius: 8px;
 }
 .blog-preview:hover{
-  box-shadow: 10px 10px 10px -1px rgba(0,0,0,0.2);
   background-color: aliceblue;
-  transition: .7s;
+  padding: 7px 12px;
+  transition: .1s;
+}
+.button{
+  background-color: aliceblue;
+  padding: 2px 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.button:hover{
+  background-color: #f1356d;
+  color: #fff;
+  transition: .1s;
+}
+.create{
+  background-color: aliceblue;
+  border-radius: 7px;
+  max-width: 600px;
+  margin: 16px auto;
+  padding: 21px 27px;
+  text-align: center;
+}
+.create-label{
+  text-align: left;
+  display: block;
+}
+.create-fields{
+  width: 90%;
+  padding: 3px 5px;
+  margin: 9px auto;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+.create textarea{
+  padding: 5px 0 70px 5px;
+}
+.borde{
+  border: 1px solid #f1356d55;
+  border-radius: 8px;
 }

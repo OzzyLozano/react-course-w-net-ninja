@@ -1,20 +1,26 @@
-import Navbar from './Navbar';
-import Home from './Home';
+import Navbar from './Navbar'
+import Home from './Home'
+import Create from './Create'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import BlogDetails from './BlogDetails'
+import NotFound from './NotFound'
 
 function App() {
-  const person = {
-    name: 'Ozzy',
-    age: 20
-  }
 
   return (
-    <div className="App">
-      <Navbar/>
-      <div className="content py-3">
-        <Home/>
-        <p className="lead">{ person.name } is { person.age } years old.</p>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <div className="content py-3">
+          <Routes>
+            <Route exact path='/' element={<Home />} />
+            <Route exact path='/create' element={<Create />} />
+            <Route exact path='/blogs/:id' element={<BlogDetails />} />
+            <Route exact path='*' element={<NotFound />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
